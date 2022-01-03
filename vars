@@ -1,0 +1,8 @@
+set_var EASYRSA_REQ_COUNTRY    "US"
+set_var EASYRSA_REQ_PROVINCE   "YOUR-State"
+set_var EASYRSA_REQ_CITY       "Your-City"
+set_var EASYRSA_REQ_ORG        "Yor company Name"
+set_var EASYRSA_REQ_EMAIL      "you@email.address"
+set_var EASYRSA_REQ_OU         "Org Unit"
+set_var EASYRSA_ALGO           "ec"
+set_var EASYRSA_DIGEST         "sha512"
