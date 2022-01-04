@@ -19,11 +19,11 @@ LABEL org.opencontainers.image.base.name="ubuntu"
 ## Tell ubuntu not to ask any questions
 ARG DEBIAN_FRONTEND=noninteractive
 ## I cant expose a file in the docker build as a volume so this is just as well.
-## Lets get DDClient Installed
+## Lets get EASYRSA Installed
 RUN apt update && apt install -y easy-rsa
 RUN mkdir /ssl && chmod 700 /ssl
 RUN ln -s /usr/share/easy-rsa/* /ssl
-RUN cd /ssl && easyrsa init-pki
+RUN /ssl/easyrsa init-pki
 COPY vars /ssl/vars
 ## Copy the scripts needed to launch and log the system
 RUN mkdir /home/scripts
